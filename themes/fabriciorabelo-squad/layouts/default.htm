@@ -11,7 +11,7 @@ description = "Default layout"
     <meta name="title" content="{% if this.page.meta_title %}{{ this.page.meta_title }}{% else %}{{ this.theme.meta_title }}{% endif %}">
     <meta name="keywords" content="{{ this.theme.meta_keywords }}">
     <meta name="description" content="{% if this.page.meta_description %}{{ this.page.meta_description }}{% else %}{{ this.theme.meta_description }}{% endif %}">
-
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -59,7 +59,61 @@ description = "Default layout"
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ 'assets/js/custom.js'|theme }}"></script>
-
+    {% if this.page.baseFileName =='vedio' %}
+    <script>
+    $(document).ready(function(){
+        var string1= "http://player.youku.com/embed/";
+        var string2= "";
+        $('#forehand').click(function (){
+            console.log(122);
+        $('#vedio').attr("src", string1 + "XMTQxOTcxOTYwNA" + string2);
+        });
+        $('#backhand').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTcxMDI4NA"+string2);
+        });
+        $('#serving').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTcyNDg2NA"+string2);
+        });
+        $('#volley').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTc0NzQ1Ng"+string2);
+        });
+        $('#smash').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTc0MjQ0NA"+string2);
+        });
+        $('#ladder').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTgyMjMwMA"+string2);
+        });
+        $('#gymball').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTc0NDQ3Ng"+string2);
+        });
+        $('#rallybelt').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTc1MDUxNg"+string2);
+        });
+        $('#warmup1').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTgwNjMwOA"+string2);
+        });
+        $('#warmup2').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTgwOTkyMA"+string2);
+        });
+        $('#warmup3').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTgxNTE0MA"+string2);
+        });
+        $('#warmup4').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTgxNjYzMg"+string2);
+        });
+        $('#warmup5').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTgxNzc0NA"+string2);
+        });
+        $('#foamroller').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTc3NjE5Ng"+string2);
+        });
+        $('#stretch').click(function (){
+        $('#vedio').attr("src",string1+"XMTQxOTc1NjczMg"+string2);
+        });
+        
+    });
+    </script>
+    {% endif%}
     <!-- OctoberCMS Ajax Framework and extras -->
     {% framework extras %}
 
